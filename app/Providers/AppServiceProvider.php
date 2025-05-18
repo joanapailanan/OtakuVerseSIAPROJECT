@@ -4,22 +4,15 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Services\AnilistService;
+use App\Services\JikanApiService;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-            
-    }
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
+    public function register()
     {
-        //
+        $this->app->singleton(JikanApiService::class, function ($app) {
+            return new JikanApiService();
+        });
     }
 }
