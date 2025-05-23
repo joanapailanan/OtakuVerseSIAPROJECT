@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 // If needed, you can include this instead or combine logic
 //use App\Http\Controllers\AnimeSearchController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\AnimeQuoteController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +28,6 @@ Route::get('/search/anime', [MediaController::class, 'searchWithJikan'])->name('
 Route::get('/anime/search', [MediaController::class, 'searchWithAnilistKitsu'])->name('anime.search');
 Route::get('/reddit/{subreddit?}', [MediaController::class, 'showReddit'])->name('reddit.show');
 Route::get('/reddit', [MediaController::class, 'showReddit'])->name('reddit.show');
+
+// Anime Quotes routes
+Route::get('/anime-quote', [MediaController::class, 'getRandomQuote'])->name('anime.quote');
