@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <h1>Search Anime</h1>
-    <form action="{{ route('anime.search') }}" method="GET">
+    <form action="{{ route('anime.search.advanced') }}" method="GET">
         <input type="text" name="q" value="{{ request('q') }}" placeholder="Search anime...">
         <button type="submit">Search</button>
     </form>
@@ -34,7 +34,7 @@
 
         @if ($has_next_page)
             <div class="mt-4">
-                <a href="{{ route('anime.search', ['q' => $query, 'page' => $current_page + 1]) }}" class="btn btn-secondary">
+                <a href="{{ route('anime.search.advanced', ['q' => $query, 'page' => $current_page + 1]) }}" class="btn btn-secondary">
                     Load More
                 </a>
             </div>
