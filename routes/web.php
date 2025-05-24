@@ -34,6 +34,8 @@ Route::get('/characters', function () {
 })->name('characters.index');
 Route::get('/api/characters', [MediaController::class, 'searchCharacters'])->name('api.characters');
 
+// Watchlist routes
+Route::get('/watchlist', function () { return view('watchlist'); })->name('watchlist.index');
 
 // Placeholder routes for navigation
 Route::get('/anime', function () {
