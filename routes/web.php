@@ -35,10 +35,11 @@ Route::get('/waifu', function () {
 })->name('waifu');
 Route::get('/waifu/{type}/{category}', [MediaController::class, 'fetch'])->name('waifu.fetch');
 
-// Trace route
+// Trace routes
 Route::get('/trace', function () {
     return view('trace');
 })->name('trace.index');
+Route::post('/api/trace', [MediaController::class, 'traceAnime'])->name('api.trace');
 
 // Watchlist route
 Route::get('/watchlist', function () {
