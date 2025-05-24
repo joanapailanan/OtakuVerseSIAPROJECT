@@ -27,6 +27,12 @@ COPY . .
 # Copy .env if not exists
 RUN cp .env.example .env || true
 
+# Move or copy static assets to public/ directory
+# Ensure they are served correctly by Apache
+RUN mkdir -p public/css public/js && \
+    cp -r resources/css/* public/css/ && \
+    cp -r resources/js/* public/js/
+
 # Avoid Composer asking questions or failing as root
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
@@ -37,7 +43,7 @@ RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# Set Apache document root to the Lumen public directory
+# Set Apache document root to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
 # Update Apache config
