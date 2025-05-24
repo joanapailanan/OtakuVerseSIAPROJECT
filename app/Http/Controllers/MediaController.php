@@ -87,13 +87,17 @@ class MediaController extends Controller
     {
         try {
             $result = $this->animeQuoteService->getRandomQuote();
-
-            return response()->json($result, $result['success'] ? 200 : 400);
+            if ($result['success']) {
+                return response()->json($result['data']);
+            }
+            return response()->json([
+                'error' => 'Failed to fetch quote.',
+                'message' => $result['message'],
+            ], $result['status'] ?? 500);
         } catch (\Exception $e) {
             return response()->json([
-                'success' => false,
-                'message' => 'An error occurred while fetching the anime quote.',
-                'error' => $e->getMessage(),
+                'error' => 'Failed to fetch quote.',
+                'message' => $e->getMessage(),
             ], 500);
         }
     }

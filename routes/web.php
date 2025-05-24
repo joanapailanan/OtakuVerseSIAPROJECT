@@ -12,11 +12,15 @@ Route::get('/anime/search', [MediaController::class, 'searchWithAnilistKitsu'])-
 Route::get('/search/anime', [MediaController::class, 'searchWithJikan'])->name('anime.search.advanced');
 
 // Reddit routes
-Route::get('/memes', [MediaController::class, 'showReddit'])->name('memes'); // Renamed from reddit.show
+Route::get('/memes', [MediaController::class, 'showReddit'])->name('memes');
+Route::get('/reddit', [MediaController::class, 'showReddit'])->name('reddit.show');
 Route::get('/reddit/{subreddit?}', [MediaController::class, 'showReddit'])->name('reddit.show');
 
-// Anime quote route
-Route::get('/quotes', [MediaController::class, 'getRandomQuote'])->name('quotes'); // Renamed from anime.quote
+// Quotes routes
+Route::get('/quotes', function () {
+    return view('quotes');
+})->name('quotes');
+Route::get('/api/quotes', [MediaController::class, 'getRandomQuote'])->name('api.quotes');
 
 // Waifu routes
 Route::get('/waifu', function () {
