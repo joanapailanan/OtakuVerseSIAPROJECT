@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browse Anime - OtakuVerse</title>
-    <meta name="description" content="Search and discover anime with OtakuVerse." />
+    <meta name="description" content="Discover and search anime with OtakuVerse." />
     <meta name="author" content="OtakuVerse" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     
@@ -193,6 +193,7 @@
         
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="{{ asset('js/utils/storage.js') }}"></script>
         <script src="{{ asset('js/utils/toast.js') }}"></script>
         <script src="{{ asset('js/utils/loading.js') }}"></script>
