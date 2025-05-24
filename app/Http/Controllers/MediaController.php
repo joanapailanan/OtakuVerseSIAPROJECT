@@ -9,6 +9,7 @@ use App\Services\AniListService;
 use App\Services\KitsuService;
 use App\Services\RedditService;
 use App\Services\AnimeQuoteService;
+use App\Services\WaifuService;
 
 class MediaController extends Controller
 {
@@ -16,17 +17,20 @@ class MediaController extends Controller
     protected $anilist;
     protected $kitsu;
     protected $animeQuoteService;
+    protected $waifuService;
 
     public function __construct(
         JikanApiService $jikan,
         AniListService $anilist,
         KitsuService $kitsu,
-        AnimeQuoteService $animeQuoteService
+        AnimeQuoteService $animeQuoteService,
+        WaifuService $waifuService
     ) {
         $this->jikan = $jikan;
         $this->anilist = $anilist;
         $this->kitsu = $kitsu;
         $this->animeQuoteService = $animeQuoteService;
+        $this->waifuService = $waifuService;
     }
 
     // Jikan search
@@ -90,6 +94,20 @@ class MediaController extends Controller
                 'success' => false,
                 'message' => 'An error occurred while fetching the anime quote.',
                 'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    //Waifu Pics
+    public function fetch(string $type, string $category): JsonResponse
+    {
+        try {
+            $data = $this->waifuService->fetchImage($type, $category);
+            return response()->json($data);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Failed to fetch image.',
+                'message' => $e->getMessage()
             ], 500);
         }
     }

@@ -17,3 +17,6 @@ Route::get('/reddit/{subreddit?}', [MediaController::class, 'showReddit'])->name
 
 // Anime quote route
 Route::get('/anime-quote', [MediaController::class, 'getRandomQuote'])->name('anime.quote');
+
+// Waifu pics
+Route::get('/waifu/{type}/{category}', [MediaController::class, 'fetch']);
