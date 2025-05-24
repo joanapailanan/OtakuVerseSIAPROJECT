@@ -47,7 +47,133 @@ document.addEventListener('DOMContentLoaded', () => {
       quote: "To know sorrow is not terrifying. What is terrifying is to know you can’t go back to happiness you could have.",
       character: "Matsumoto Rangiku",
       anime: "Bleach"
-    }
+    },
+    {
+      quote: "A lesson you learned from pain is not easily forgotten.",
+      character: "Holo",
+      anime: "Spice and Wolf"
+    },
+    {
+      quote: "A person becomes strong when they have someone they want to protect.",
+      character: "Haku",
+      anime: "Naruto"
+    },
+    {
+      quote: "Forgetting is like a wound. The wound may heal, but it has already left a scar.",
+      character: "Monkey D. Luffy",
+      anime: "One Piece"
+    },
+    {
+      quote: "It’s not the face that makes someone a monster; it’s the choices they make with their lives.",
+      character: "Naruto Uzumaki",
+      anime: "Naruto"
+    },
+    {
+      quote: "The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.",
+      character: "Roy Mustang",
+      anime: "Fullmetal Alchemist: Brotherhood"
+    },
+    {
+      quote: "Power comes in response to a need, not a desire. You have to create that need.",
+      character: "Goku",
+      anime: "Dragon Ball Z"
+    },
+    {
+      quote: "Fear is not evil. It tells you what your weakness is. And once you know your weakness, you can become stronger as well as kinder.",
+      character: "Gildarts Clive",
+      anime: "Fairy Tail"
+    },
+    {
+      quote: "You should enjoy the little detours. Because that's where you'll find the things more important than what you want.",
+      character: "Ging Freecss",
+      anime: "Hunter x Hunter"
+    },
+    {
+      quote: "A lesson without pain is meaningless. That’s because you can’t gain something without sacrificing something else.",
+      character: "Edward Elric",
+      anime: "Fullmetal Alchemist: Brotherhood"
+    },
+    {
+      quote: "Hard work is worthless for those that don’t believe in themselves.",
+      character: "Naruto Uzumaki",
+      anime: "Naruto"
+    },
+      {
+    quote: "You should enjoy the little moments. Because that’s where you'll find the things that matter most.",
+    character: "Gintoki Sakata",
+    anime: "Gintama"
+  },
+  {
+    quote: "The world is not something that is given to you. It is something you have to take for yourself.",
+    character: "Shogo Makishima",
+    anime: "Psycho-Pass"
+  },
+  {
+    quote: "Life is not a game of luck. If you wanna win, work hard.",
+    character: "Sora",
+    anime: "No Game No Life"
+  },
+  {
+    quote: "You don’t die for your friends, you live for them.",
+    character: "Erza Scarlet",
+    anime: "Fairy Tail"
+  },
+  {
+    quote: "Everything has its beauty, but not everyone sees it.",
+    character: "Konata Izumi",
+    anime: "Lucky Star"
+  },
+  {
+    quote: "In our society, letting others find out that you're a nice guy is a very risky move. It's extremely likely that someone would take advantage of that.",
+    character: "Hitagi Senjougahara",
+    anime: "Bakemonogatari"
+  },
+  {
+    quote: "Even if I can’t do it now, I’ll get stronger and stronger until I can. That’s the spirit of a warrior.",
+    character: "Yato",
+    anime: "Noragami"
+  },
+  {
+    quote: "I want to be stronger. Strong enough so that no one will have to worry about me.",
+    character: "Hinata Hyuga",
+    anime: "Naruto"
+  },
+  {
+    quote: "Fear is freedom! Subjugation is liberation! Contradiction is truth!",
+    character: "Satsuki Kiryuuin",
+    anime: "Kill la Kill"
+  },
+  {
+    quote: "You need to accept the fact that you're not the best and have all the will to strive to be better than anyone you face.",
+    character: "Roronoa Zoro",
+    anime: "One Piece"
+  },
+  {
+    quote: "Power is not determined by your size, but the size of your heart and dreams.",
+    character: "Lumen Hikari",
+    anime: "Pokémon"
+  },
+  {
+    quote: "Whether a fish lives in a clear stream or a water ditch, so long as it continues swimming forward, it will grow up beautifully.",
+    character: "Koro Sensei",
+    anime: "Assassination Classroom"
+  },
+  {
+    quote: "The world is cruel, but also very beautiful.",
+    character: "Mikasa Ackerman",
+    anime: "Attack on Titan"
+  },
+  {
+    quote: "A person grows up when he's able to overcome hardships. Protection is important, but there are some things a person must learn on his own.",
+    character: "Reigen Arataka",
+    anime: "Mob Psycho 100"
+  },
+  {
+    quote: "Miracles don’t happen by just sitting around. We have to make them happen ourselves.",
+    character: "Tsubaki Nakatsukasa",
+    anime: "Soul Eater"
+  }
+
   ];
 
   // Local storage for caching quotes
