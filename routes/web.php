@@ -28,6 +28,13 @@ Route::get('/waifu', function () {
 })->name('waifu');
 Route::get('/waifu/{type}/{category}', [MediaController::class, 'fetch'])->name('waifu.fetch');
 
+// Characters routes
+Route::get('/characters', function () {
+    return view('characters');
+})->name('characters.index');
+Route::get('/api/characters', [MediaController::class, 'searchCharacters'])->name('api.characters');
+
+
 // Placeholder routes for navigation
 Route::get('/anime', function () {
     return view('anime'); // anime.blade.php or implement MediaController::index
