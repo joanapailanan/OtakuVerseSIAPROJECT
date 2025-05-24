@@ -27,12 +27,6 @@ COPY . .
 # Copy .env if not exists
 RUN cp .env.example .env || true
 
-# Move or copy static assets to public/ directory
-# Ensure they are served correctly by Apache
-RUN mkdir -p public/css public/js && \
-    cp -r resources/css/* public/css/ && \
-    cp -r resources/js/* public/js/
-
 # Avoid Composer asking questions or failing as root
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
@@ -46,7 +40,7 @@ RUN chown -R www-data:www-data /var/www/html \
 # Set Apache document root to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
-# Update Apache config
+# Update Apache config for new document root
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 
 # Expose Apache and SSH ports
