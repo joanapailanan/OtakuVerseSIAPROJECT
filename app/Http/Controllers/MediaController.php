@@ -99,7 +99,7 @@ class MediaController extends Controller
     }
 
     //Waifu Pics
-    public function fetch(string $type, string $category): JsonResponse
+    public function fetch(string $type = 'sfw', string $category = 'waifu'): JsonResponse
     {
         try {
             $data = $this->waifuService->fetchImage($type, $category);
