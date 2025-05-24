@@ -47,7 +47,7 @@
                         <i data-lucide="message-square"></i>
                         <span>Quotes</span>
                     </a>
-                    <a href="/memes" class="nav-link">
+                    <a href="/reddit" class="nav-link">
                         <i data-lucide="smile-plus"></i>
                         <span>Memes</span>
                     </a>
